@@ -1,6 +1,5 @@
 import Select from "./SelectDropDown.js";
-import CancelSharpIcon from "@mui/icons-material/CancelSharp";
-
+import ClearSharpIcon from "@mui/icons-material/ClearSharp";
 
 const TextBox = ({
   style,
@@ -10,20 +9,19 @@ const TextBox = ({
   textToTranslate,
   translatedText,
   setTranslatedText,
-  translate
+  translate,
 }) => {
   const handleClick = () => {
     setTextToTranslate("");
     setTranslatedText("");
   };
 
-
-const handleKeyDown = (event) => {
-  console.log(event.key)
-  if (event.metaKey && event.key === 'Enter') {
-    translate();
-  }
-}
+  const handleKeyDown = (event) => {
+    console.log(event.key);
+    if (event.metaKey && event.key === "Enter") {
+      translate();
+    }
+  };
   return (
     <div className={style}>
       <Select
@@ -40,7 +38,7 @@ const handleKeyDown = (event) => {
       />
       {style == "input" && (
         <div className="delete" onClick={handleClick}>
-          <CancelSharpIcon />
+          <ClearSharpIcon />
         </div>
       )}
     </div>

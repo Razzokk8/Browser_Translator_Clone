@@ -2,7 +2,7 @@ import SyncAltSharpIcon from '@mui/icons-material/SyncAltSharp';
 
 const Arrows = () => {
     return (
-        <span className='text-white px-3 cursor-pointer'>
+        <span className='text-[#8ab4f8] px-3 cursor-pointer'>
             <SyncAltSharpIcon />
         </span>
     )

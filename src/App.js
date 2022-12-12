@@ -4,6 +4,7 @@ import Arrows from "./components/Arrows.js";
 import Buttons from "./components/Button.js";
 import Modal from "./components/Modal.js";
 import TextBox from "./components/TxtBox.js";
+import Label from "./components/Label.js";
 
 // this will work with auto translate
 const autoTranslate = () => {
@@ -50,11 +51,11 @@ const App = () => {
 
   return (
     <div className="App mt-16">
-      <h1 className="text-white text-xl mb-8">MY G-TRANSLATOR CLONE</h1>
+      <h1 className="text-white text-center text-xl mb-8">MY TRANSLATOR CLONE</h1>
       <br />
 
       {!showModal && (
-        <div className="sub">
+        <div className="sub md:flex">
           <TextBox
             setShowModal={setShowModal}
             selectedLanguage={inputLanguage}
@@ -65,7 +66,7 @@ const App = () => {
             translate={translate}
           />
 
-          <div className="arrows-container" onClick={handleClick}>
+          <div className="arrows-container mb-6" onClick={handleClick}>
             <Arrows />
           </div>
 
@@ -93,6 +94,7 @@ const App = () => {
           }
         />
       )}
+      <Label />
     </div>
   );
 };

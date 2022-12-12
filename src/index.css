@@ -16,12 +16,13 @@ body {
 .App {
   text-align: center;
   min-height: 100vh;
-
 }
 
 .sub {
-  display: flex;
+  display: block;
   justify-content: center;
+  margin: 10px;
+  min-height: 70vh;
 }
 
 textarea {
@@ -45,6 +46,7 @@ input {
   padding: 5px 15px;
   color: whitesmoke;
   width: 100%;
+  /* max-width: 310px; */
   font-size: 14px;
   box-sizing: border-box;
 }
@@ -65,9 +67,6 @@ input {
 }
 
 .list-item > .icon {
-  padding: 2px;
-  width: 18px;
-  height: 18px;
   color: #8ab4f8;
 }
 
@@ -85,5 +84,13 @@ ul , li {
   border-radius: 5px;
 }
 .select-drop-down input {
-  /* color: red; */
+  color: #8ab4f8;
+}
+
+.input .delete {
+  position: relative;
+  left: 133px;
+  top: -168px;
+  color:#bdc1c6;
+  cursor: pointer;
 }
