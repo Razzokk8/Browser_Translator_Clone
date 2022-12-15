@@ -32,6 +32,7 @@ app.get("/languages", async (req, res) => {
   }
 });
 
+
 app.get("/translation", async (req, res) => {
   const { textToTranslate, outputLanguage, inputLanguage } = req.query;
 
@@ -60,4 +61,4 @@ app.get("/translation", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => console.log("server running on: " + PORT));
+app.listen(process.env.PORT || PORT, () => console.log("server running on: " + PORT));
