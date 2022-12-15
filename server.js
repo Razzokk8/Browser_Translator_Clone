@@ -61,4 +61,4 @@ app.get("/translation", async (req, res) => {
   }
 });
 
-app.listen(process.env.PORT || PORT, () => console.log("server running on: " + PORT));
+app.listen(PORT, () => console.log("server running on: " + PORT));
