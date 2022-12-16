@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Arrows from "./components/Arrows.js";
+/* import Arrows from "./components/Arrows.js";
 import Buttons from "./components/Button.js";
 import Modal from "./components/Modal.js";
 import TextBox from "./components/TxtBox.js";
-import Label from "./components/Label.js";
+import Label from "./components/Label.js"; */
 
 // this will work with auto translate
 const autoTranslate = () => {
@@ -56,7 +56,7 @@ const App = () => {
 
       {!showModal && (
         <div className="sub md:flex">
-          <TextBox
+{/*           <TextBox
             setShowModal={setShowModal}
             selectedLanguage={inputLanguage}
             style="input"
@@ -64,37 +64,37 @@ const App = () => {
             setTextToTranslate={setTextToTranslate}
             setTranslatedText={setTranslatedText}
             translate={translate}
-          />
+          /> */}
 
           <div className="arrows-container mb-6" onClick={handleClick}>
-            <Arrows />
+            {/* <Arrows /> */}
           </div>
 
-          <TextBox
+{/*           <TextBox
             setShowModal={setShowModal}
             selectedLanguage={outputLanguage}
             style="output"
             translatedText={translatedText}
-          />
+          /> */}
           <div
             className="button-container text-white px-3 cursor-pointer"
             onClick={translate}
           >
-            <Buttons />
+            {/* <Buttons /> */}
           </div>
         </div>
       )}
       {showModal && (
-        <Modal
+{/*         <Modal
           languages={languages}
           setShowModal={setShowModal}
           chosenLanguage={showModal == "input" ? inputLanguage : outputLanguage}
           setChosenLanguage={
             showModal == "input" ? setInputLanguage : setOutputLanguage
           }
-        />
+        /> */}
       )}
-      <Label />
+      {/* <Label /> */}
     </div>
   );
 };
