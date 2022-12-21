@@ -1,4 +1,4 @@
-const PORT = 8000;
+
 const axios = require("axios").default;
 const express = require("express");
 const cors = require("cors");
@@ -60,5 +60,5 @@ app.get("/translation", async (req, res) => {
     res.status(500).json({ message: err });
   }
 });
-
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => console.log("server running on: " + PORT));
