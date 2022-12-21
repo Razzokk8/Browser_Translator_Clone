@@ -80,21 +80,21 @@ const App = () => {
             className="button-container text-white px-3 cursor-pointer"
             onClick={translate}
           >
-            {/* <Buttons /> */}
+            <Buttons />
           </div>
         </div>
       )}
       {showModal && (
-{/*         <Modal
+        <Modal
           languages={languages}
           setShowModal={setShowModal}
           chosenLanguage={showModal == "input" ? inputLanguage : outputLanguage}
           setChosenLanguage={
             showModal == "input" ? setInputLanguage : setOutputLanguage
           }
-        /> */}
+        />
       )}
-      {/* <Label /> */}
+      <Label />
     </div>
   );
 };
