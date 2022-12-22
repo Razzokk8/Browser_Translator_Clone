@@ -1,4 +1,3 @@
-
 const axios = require("axios").default;
 const express = require("express");
 const cors = require("cors");
@@ -32,7 +31,6 @@ app.get("/languages", async (req, res) => {
   }
 });
 
-
 app.get("/translation", async (req, res) => {
   const { textToTranslate, outputLanguage, inputLanguage } = req.query;
 
@@ -61,4 +59,5 @@ app.get("/translation", async (req, res) => {
   }
 });
 const PORT = process.env.PORT || 8000;
+
 app.listen(PORT, () => console.log("server running on: " + PORT));
